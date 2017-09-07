@@ -120,5 +120,8 @@ var handlers = {
     },
     'AMAZON.StopIntent': function () {
         this.emit(':tell', STOP_MESSAGE);
+    },
+    'Unhandled': function () {
+        this.emit(':tell', STOP_MESSAGE);
     }
 };
