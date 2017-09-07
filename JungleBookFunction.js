@@ -98,6 +98,7 @@ var handlers = {
         var selectedAnimal = this.event.request.intent.slots.SelectedAnimal.value;
         var traits = animalTraitMap[selectedAnimal];
         if(traits){
+            console.error("---------Presenting facts for " + selectedAnimal+"---------");
             speechOutput = "Here is the fact about " + selectedAnimal + " . ";
             var fact = traits[Math.floor(Math.random() * 5) + 1];
             speechOutput += fact;
