@@ -94,6 +94,7 @@ var handlers = {
         this.emit(':ask', speechOutput, speechOutput);
     },
     'SelectAnimalIntent': function () {
+        console.info("Received request for " + selectedAnimal+" from user " +  JSON.stringify(this.event.context.System.user.userId));        
         var speechOutput = "";
         var selectedAnimal = this.event.request.intent.slots.SelectedAnimal.value;
         var traits = animalTraitMap[selectedAnimal];
